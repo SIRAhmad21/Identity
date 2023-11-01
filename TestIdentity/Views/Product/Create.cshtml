@@ -1,0 +1,29 @@
+﻿@model Prodect
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<form method="post" asp-action="Create">
+    <table >
+
+        <tr>
+            <td><label asp-for="ProductName"> </label> </td>
+            <td><input asp-for="ProductName" class="form-control" placeholder="example "> </td>
+        </tr>
+        <tr>
+            <td><label asp-for="Price"> </label> </td>
+            <td><input asp-for="Price" class="form-control"> </td>
+        </tr>
+      
+        <tr>
+            <td>
+                <input type="submit" value="Save" class="btn btn-success" />
+                <a asp-action="Index" class="btn btn-danger">Back</a>
+            </td>
+
+        </tr>
+    </table>
+
+</form>

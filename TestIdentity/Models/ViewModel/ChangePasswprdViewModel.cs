@@ -1,0 +1,18 @@
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace TestIdentity.Models.ViewModel
+{
+    public class ChangePasswprdViewModel
+    {
+        [Required(ErrorMessage = "Enter Your Current Password")]
+        [DataType(DataType.Password)]    
+        public string OldPassword {  get; set; }
+        [Required(ErrorMessage = "Enter Your Password")]
+        [DataType(DataType.Password)]
+        public string NewPassword { get; set; }
+        [Required(ErrorMessage = "Confirm Your Password")]
+        [DataType(DataType.Password)]
+        [Compare("NewPassword", ErrorMessage = "The new password and confirmation password do not match.")]
+        public string ConfirmPassword { get; set; }
+    }
+}
